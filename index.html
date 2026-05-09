@@ -5,13 +5,13 @@
   <!-- TODO: generate favicon.png and apple-touch-icon.png in images/ folder -->
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F5ECD7'/%3E%3Ctext x='4' y='21' font-family='Georgia%2C serif' font-weight='400' font-size='10'%3E%3Ctspan fill='%231A1410'%3ECE%3C/tspan%3E%3Ctspan fill='%23C05228'%3EEP%3C/tspan%3E%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23FFFFFF'/%3E%3Ctext x='4' y='21' font-family='Georgia%2C serif' font-weight='400' font-size='10'%3E%3Ctspan fill='%230E2A3A'%3ECE%3C/tspan%3E%3Ctspan fill='%232E6A82'%3EEP%3C/tspan%3E%3C/text%3E%3C/svg%3E">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="format-detection" content="telephone=no">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="theme-color" content="#F5ECD7">
+  <meta name="theme-color" content="#5AA9C7">
   <title>CEEP Tourism — Crafted Journeys for Those Who Travel Differently</title>
   <meta name="description" content="CEEP Tourism is the premium travel arm of CEEP. Bespoke worldwide itineraries, private guides, visa support, and luxury extras — curated by insiders with 7 years of European experience." />
 
@@ -24,18 +24,18 @@
     html { scroll-behavior: smooth; font-size: 16px; }
 
     :root {
-      --ink:          #1A1410;
-      --parchment:    #F5ECD7;
-      --parchment2:   #EAD9BB;
-      --stone:        #D9C9A8;
-      --stone2:       #C8B898;
-      --terracotta:   #C05228;
-      --terracotta-d: #9B3D1B;
-      --burgundy:     #7A1E3A;
-      --muted:        #7A6A54;
+      --ink:          #0E2A3A;
+      --parchment:    #FFFFFF;
+      --parchment2:   #F4F9FB;
+      --stone:        #E2EDF1;
+      --stone2:       #C8DCE5;
+      --terracotta:   #5AA9C7;
+      --terracotta-d: #2E6A82;
+      --burgundy:     #2E6A82;
+      --muted:        #4A6577;
       --gold:         #C9A961;
       --gold-d:       #A88840;
-      --warm-white:   #FBF6E9;
+      --warm-white:   #F4F9FB;
       --font-display: 'Bebas Neue', sans-serif;
       --font-serif:   'Cormorant Garamond', Georgia, serif;
       --font-body:    'Instrument Sans', sans-serif;
@@ -79,7 +79,7 @@
       transition: background .4s ease, backdrop-filter .4s ease, border-bottom .4s ease, padding .3s ease;
     }
     nav.scrolled {
-      background: rgba(245,236,215,.94); backdrop-filter: blur(22px);
+      background: rgba(244,249,251,.96); backdrop-filter: blur(22px);
       border-bottom: 1px solid rgba(201,169,97,.2);
       padding: .9rem 2.5rem;
     }
@@ -148,10 +148,10 @@
     .hero-bg {
       position: absolute; inset: 0; z-index: 0;
       background:
-        radial-gradient(ellipse at 8% 80%, rgba(192,82,40,.09) 0%, transparent 50%),
-        radial-gradient(ellipse at 90% 15%, rgba(122,30,58,.07) 0%, transparent 45%),
+        radial-gradient(ellipse at 8% 80%, rgba(90,169,199,.09) 0%, transparent 50%),
+        radial-gradient(ellipse at 90% 15%, rgba(46,106,130,.07) 0%, transparent 45%),
         radial-gradient(ellipse at 55% 45%, rgba(201,169,97,.05) 0%, transparent 55%),
-        linear-gradient(160deg, #F5ECD7 0%, #EFE2C6 50%, #EBE0D0 100%);
+        linear-gradient(160deg, #FFFFFF 0%, #EDF5F8 50%, #E8F2F6 100%);
     }
     /* World map silhouette in low opacity */
     .hero-worldmap {
@@ -164,7 +164,7 @@
     .hf { position: absolute; border-radius: 6px; overflow: hidden; opacity: 0; animation: floatIn 1.1s ease forwards; box-shadow: 0 18px 50px rgba(26,20,16,.18), 0 4px 12px rgba(26,20,16,.1); }
     .hf::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gold); z-index: 2; opacity: .8; }
     .hf img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.72) sepia(.18) brightness(.80); }
-    .hf::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(245,236,215,.8) 100%); }
+    .hf::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 45%, rgba(244,249,251,.8) 100%); }
     .hf1 { width: 280px; height: 190px; top: 10%; right: 6%; animation-delay: .4s; }
     .hf2 { width: 200px; height: 145px; top: 36%; right: 20%; animation-delay: .7s; }
     .hf3 { width: 240px; height: 160px; top: 57%; right: 4%; animation-delay: 1s; }
@@ -228,7 +228,7 @@
     .btn-secondary {
       font-family: var(--font-body); font-size: .88rem; font-weight: 600; letter-spacing: .07em;
       text-transform: uppercase; color: var(--ink); background: transparent;
-      border: 2px solid rgba(26,20,16,.2); padding: 1rem 2.2rem; border-radius: 2px;
+      border: 2px solid rgba(14,42,58,.2); padding: 1rem 2.2rem; border-radius: 2px;
       cursor: none; text-decoration: none; transition: all .25s ease;
     }
     .btn-secondary:hover { border-color: var(--ink); transform: translateY(-2px); }
@@ -352,12 +352,12 @@
     #destinations::before {
       content: ''; position: absolute; inset: 0; pointer-events: none;
       background: radial-gradient(ellipse at 15% 80%, rgba(201,169,97,.06) 0%, transparent 50%),
-                  radial-gradient(ellipse at 85% 20%, rgba(192,82,40,.06) 0%, transparent 50%);
+                  radial-gradient(ellipse at 85% 20%, rgba(90,169,199,.06) 0%, transparent 50%);
     }
     .destinations-inner { max-width: 1300px; margin: 0 auto; position: relative; z-index: 1; }
     .destinations-inner .section-tag { color: var(--gold); }
     .destinations-inner .section-title { color: var(--warm-white); }
-    .destinations-inner .section-serif { color: rgba(251,246,233,.5); }
+    .destinations-inner .section-serif { color: rgba(244,249,251,.5); }
     .dest-region-label {
       font-size: .63rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase;
       color: rgba(201,169,97,.55); margin: 2.5rem 0 1.2rem;
@@ -394,7 +394,7 @@
     #why-us::before {
       content: ''; position: absolute; inset: 0;
       background: radial-gradient(ellipse at 25% 50%, rgba(201,169,97,.12) 0%, transparent 50%),
-                  radial-gradient(ellipse at 75% 50%, rgba(192,82,40,.1) 0%, transparent 50%);
+                  radial-gradient(ellipse at 75% 50%, rgba(90,169,199,.1) 0%, transparent 50%);
       pointer-events: none;
     }
     #why-us::after { content: '✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦  ✦'; position: absolute; top: 0; left: 0; right: 0; text-align: center; font-size: .6rem; color: rgba(201,169,97,.15); padding: .45rem 0; letter-spacing: .4em; }
@@ -443,7 +443,7 @@
     .advisory-card .team-name { font-size: 1.05rem; margin-bottom: .4rem; }
     .team-bio { font-size: .88rem; color: var(--muted); line-height: 1.65; }
     .advisory-card .team-bio { font-size: .82rem; }
-    .team-quote { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--stone); font-family: var(--font-serif); font-style: italic; font-size: .9rem; color: rgba(26,20,16,.38); }
+    .team-quote { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--stone); font-family: var(--font-serif); font-style: italic; font-size: .9rem; color: rgba(14,42,58,.38); }
     .advisory-badge-pill {
       display: inline-flex; align-items: center; gap: .3rem; margin-top: .6rem;
       background: rgba(201,169,97,.1); border: 1px solid rgba(201,169,97,.28); border-radius: 100px;
@@ -458,8 +458,8 @@
     .contact-bg { position: absolute; inset: 0; background: var(--ink); z-index: 0; }
     .contact-bg::after {
       content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 25% 35%, rgba(192,82,40,.12) 0%, transparent 50%),
-                  radial-gradient(ellipse at 78% 65%, rgba(122,30,58,.14) 0%, transparent 50%);
+      background: radial-gradient(ellipse at 25% 35%, rgba(90,169,199,.12) 0%, transparent 50%),
+                  radial-gradient(ellipse at 78% 65%, rgba(46,106,130,.14) 0%, transparent 50%);
     }
     .contact-glow {
       position: absolute; width: 600px; height: 600px; border-radius: 50%;
@@ -529,6 +529,90 @@
       .about-stats-row { grid-template-columns: 1fr 1fr; gap: 1rem; }
       .dest-grid { grid-template-columns: repeat(2,1fr); }
       section { padding: 4rem 1.2rem; }
+    }
+
+    /* ─── PLAN / BOOKING CALCULATOR ─────────────────────────────────────── */
+    .plan-section { background: var(--parchment2); border-top: 1px solid var(--stone); }
+    .plan-section .section-header { max-width: 600px; margin-bottom: 3rem; }
+    .plan-section .eyebrow { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--terracotta); margin-bottom: .8rem; }
+    .plan-section .section-title { font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem); line-height: .95; text-transform: uppercase; color: var(--ink); }
+    .plan-grid { display: grid; grid-template-columns: 1fr 380px; gap: 2.5rem; align-items: start; }
+    @media(max-width:1024px){ .plan-grid { grid-template-columns: 1fr; } }
+
+    /* Builder */
+    .plan-builder { display: flex; flex-direction: column; gap: 1.6rem; }
+    .plan-step { background: #fff; border: 1px solid var(--stone); border-radius: 10px; padding: 2rem 2.2rem; }
+    .plan-step-head { display: flex; align-items: baseline; gap: .9rem; margin-bottom: 1.4rem; }
+    .plan-step-num { font-family: var(--font-display); font-size: 2.4rem; line-height: 1; color: var(--stone2); letter-spacing: .04em; }
+    .plan-step-title { font-family: var(--font-display); font-size: 1.15rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
+
+    /* Steppers */
+    .stepper-row { display: flex; align-items: center; justify-content: space-between; padding: .6rem 0; border-bottom: 1px solid var(--stone); }
+    .stepper-row:last-child { border-bottom: none; }
+    .stepper-label { font-size: .9rem; color: var(--ink); font-weight: 500; }
+    .stepper-sub { font-family: var(--font-serif); font-style: italic; font-size: .78rem; color: var(--muted); margin-top: .1rem; }
+    .stepper-ctrl { display: flex; align-items: center; gap: .7rem; }
+    .stepper-btn { width: 32px; height: 32px; border-radius: 50%; border: 1.5px solid var(--stone2); background: none; color: var(--ink); font-size: 1.1rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: border-color .2s, background .2s, color .2s; line-height: 1; }
+    .stepper-btn:hover { border-color: var(--terracotta); background: var(--terracotta); color: white; }
+    .stepper-val { font-family: var(--font-display); font-size: 1.6rem; min-width: 2.2rem; text-align: center; color: var(--ink); }
+
+    /* Date inputs */
+    .dates-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .date-field { display: flex; flex-direction: column; gap: .4rem; }
+    .date-field label { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .date-field input[type=date] { width: 100%; padding: .6rem .8rem; border: 1.5px solid var(--stone); border-radius: 6px; font-family: var(--font-body); font-size: .9rem; color: var(--ink); background: var(--parchment2); outline: none; transition: border-color .2s; }
+    .date-field input[type=date]:focus { border-color: var(--terracotta); }
+
+    /* Tour radio cards */
+    .tour-cards { display: flex; flex-direction: column; gap: .75rem; }
+    .tour-card { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; border: 1.5px solid var(--stone); border-radius: 8px; cursor: pointer; transition: border-color .25s, background .25s; }
+    .tour-card:hover { border-color: var(--terracotta); }
+    .tour-card input[type=radio] { margin-top: .25rem; accent-color: var(--terracotta-d); flex-shrink: 0; }
+    .tour-card-info { flex: 1; }
+    .tour-card-name { font-weight: 600; font-size: .95rem; color: var(--ink); }
+    .tour-card-tagline { font-family: var(--font-serif); font-style: italic; font-size: .82rem; color: var(--muted); margin-top: .15rem; }
+    .tour-card-price { font-family: var(--font-display); font-size: 1.15rem; color: var(--terracotta-d); white-space: nowrap; }
+    .tour-card.selected { border-color: var(--terracotta); background: rgba(90,169,199,.06); }
+
+    /* Add-ons */
+    .addon-list { display: flex; flex-direction: column; gap: .6rem; }
+    .addon-btn { display: flex; align-items: center; justify-content: space-between; padding: .85rem 1.2rem; border: 1.5px solid var(--stone); border-radius: 8px; cursor: pointer; background: none; width: 100%; text-align: left; transition: border-color .25s, background .25s; }
+    .addon-btn:hover { border-color: var(--gold); }
+    .addon-btn.active { border-color: var(--terracotta); background: rgba(90,169,199,.06); }
+    .addon-btn-left { display: flex; flex-direction: column; gap: .15rem; }
+    .addon-name { font-weight: 600; font-size: .92rem; color: var(--ink); }
+    .addon-price { font-family: var(--font-serif); font-style: italic; font-size: .8rem; color: var(--muted); }
+    .addon-tick { width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--stone2); background: none; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: .8rem; color: transparent; transition: all .2s; }
+    .addon-btn.active .addon-tick { background: var(--terracotta); border-color: var(--terracotta); color: white; }
+
+    /* Guide alert */
+    #guide-alert { display: flex; align-items: center; gap: .6rem; margin-top: .8rem; padding: .75rem 1rem; border: 1px solid rgba(201,169,97,.5); border-left: 3px solid var(--gold); border-radius: 6px; background: rgba(201,169,97,.07); font-size: .84rem; color: var(--muted); font-family: var(--font-serif); font-style: italic; }
+
+    /* Summary panel */
+    .plan-summary {
+      background: #fff; border: 1px solid var(--stone); border-radius: 12px;
+      padding: 2rem; position: sticky; top: 100px;
+    }
+    .plan-summary-title { font-family: var(--font-display); font-size: 2rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); margin-bottom: 1.4rem; }
+    .summary-rows { display: flex; flex-direction: column; gap: .55rem; margin-bottom: 1.2rem; }
+    .summary-row { display: flex; justify-content: space-between; align-items: baseline; }
+    .summary-row-label { font-size: .82rem; color: var(--muted); }
+    .summary-row-val { font-size: .88rem; font-weight: 600; color: var(--ink); text-align: right; max-width: 55%; }
+    .summary-divider { height: 1px; background: linear-gradient(to right, transparent, var(--gold), transparent); opacity: .45; margin: 1rem 0; }
+    .summary-total-label { font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+    .summary-total-val { font-family: var(--font-display); font-size: 3rem; line-height: 1; color: var(--terracotta-d); letter-spacing: .02em; }
+    .summary-total-val .currency { font-size: 1.4rem; vertical-align: top; margin-top: .4rem; display: inline-block; }
+    .btn-wa { display: block; width: 100%; margin-top: 1.4rem; padding: 1rem; background: var(--terracotta-d); color: white; text-align: center; font-family: var(--font-body); font-size: .88rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; transition: background .2s, transform .15s; }
+    .btn-wa:hover { background: #235469; transform: translateY(-1px); }
+
+    /* Mobile summary bar */
+    @media(max-width:1024px){
+      .plan-summary { position: fixed; bottom: 0; left: 0; right: 0; border-radius: 16px 16px 0 0; z-index: 200; padding: 1rem 1.4rem; border-bottom: none; box-shadow: 0 -4px 30px rgba(14,42,58,.12); display: flex; flex-direction: column; gap: .5rem; }
+      .plan-summary-title { font-size: 1.3rem; margin-bottom: .3rem; }
+      .summary-rows { flex-direction: row; flex-wrap: wrap; gap: .4rem; margin-bottom: 0; }
+      .summary-row { flex-direction: column; align-items: flex-start; gap: 0; min-width: 90px; }
+      .summary-total-val { font-size: 2rem; }
+      .summary-divider { display: none; }
     }
   </style>
 </head>
@@ -794,6 +878,174 @@
           <div class="service-title">Premium Extras</div>
           <div class="service-desc">Private airport transfers, Michelin-starred reservations, luxury hotel access, helicopter and yacht charters, private museum visits — the exceptional, arranged.</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PLAN / BOOKING CALCULATOR ══════════════════════════════════════════ -->
+  <section id="plan" class="plan-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Compose Your Voyage</span>
+        <h2 class="section-title">Plan Your Journey</h2>
+      </div>
+      <div class="plan-grid">
+        <!-- LEFT: Builder -->
+        <div class="plan-builder">
+
+          <!-- Step 01: Travelers -->
+          <div class="plan-step reveal">
+            <div class="plan-step-head">
+              <span class="plan-step-num">01</span>
+              <span class="plan-step-title">Travelers</span>
+            </div>
+            <div class="stepper-row">
+              <div>
+                <div class="stepper-label">Adults</div>
+                <div class="stepper-sub">12 to 65 years</div>
+              </div>
+              <div class="stepper-ctrl">
+                <button class="stepper-btn" id="adults-minus" aria-label="Remove adult">&#8722;</button>
+                <span class="stepper-val" id="adults-val">2</span>
+                <button class="stepper-btn" id="adults-plus" aria-label="Add adult">&#43;</button>
+              </div>
+            </div>
+            <div class="stepper-row">
+              <div>
+                <div class="stepper-label">Children</div>
+                <div class="stepper-sub">Under 12 years</div>
+              </div>
+              <div class="stepper-ctrl">
+                <button class="stepper-btn" id="children-minus" aria-label="Remove child">&#8722;</button>
+                <span class="stepper-val" id="children-val">0</span>
+                <button class="stepper-btn" id="children-plus" aria-label="Add child">&#43;</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 02: Travel Dates -->
+          <div class="plan-step reveal reveal-delay-1">
+            <div class="plan-step-head">
+              <span class="plan-step-num">02</span>
+              <span class="plan-step-title">Travel Dates</span>
+            </div>
+            <div class="dates-row">
+              <div class="date-field">
+                <label for="date-start">Departure</label>
+                <input type="date" id="date-start" />
+              </div>
+              <div class="date-field">
+                <label for="date-end">Return</label>
+                <input type="date" id="date-end" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 03: Choose Tour -->
+          <div class="plan-step reveal reveal-delay-2">
+            <div class="plan-step-head">
+              <span class="plan-step-num">03</span>
+              <span class="plan-step-title">Choose Your Tour</span>
+            </div>
+            <div class="tour-cards">
+              <label class="tour-card" id="tc-budapest">
+                <input type="radio" name="tour" value="budapest" data-price="800" />
+                <div class="tour-card-info">
+                  <div class="tour-card-name">Budapest</div>
+                  <div class="tour-card-tagline">Where the Danube whispers centuries of empire.</div>
+                </div>
+                <div class="tour-card-price">800 EUR<br/><small style="font-family:var(--font-body);font-size:.65rem;font-weight:400;color:var(--muted)">/person</small></div>
+              </label>
+              <label class="tour-card" id="tc-paris">
+                <input type="radio" name="tour" value="paris" data-price="1200" />
+                <div class="tour-card-info">
+                  <div class="tour-card-name">Paris</div>
+                  <div class="tour-card-tagline">The eternal city that never stops surprising.</div>
+                </div>
+                <div class="tour-card-price">1200 EUR<br/><small style="font-family:var(--font-body);font-size:.65rem;font-weight:400;color:var(--muted)">/person</small></div>
+              </label>
+              <label class="tour-card" id="tc-italy">
+                <input type="radio" name="tour" value="italy" data-price="1500" />
+                <div class="tour-card-info">
+                  <div class="tour-card-name">Across Italy</div>
+                  <div class="tour-card-tagline">Rome, Florence, Venice — art carved into stone.</div>
+                </div>
+                <div class="tour-card-price">1500 EUR<br/><small style="font-family:var(--font-body);font-size:.65rem;font-weight:400;color:var(--muted)">/person</small></div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 04: Add-Ons -->
+          <div class="plan-step reveal reveal-delay-3">
+            <div class="plan-step-head">
+              <span class="plan-step-num">04</span>
+              <span class="plan-step-title">Premium Add-Ons</span>
+            </div>
+            <div class="addon-list">
+              <button class="addon-btn" id="addon-visa" type="button">
+                <div class="addon-btn-left">
+                  <span class="addon-name">Visa Document Support</span>
+                  <span class="addon-price">+150 EUR / person</span>
+                </div>
+                <span class="addon-tick">&#10003;</span>
+              </button>
+              <button class="addon-btn" id="addon-map" type="button">
+                <div class="addon-btn-left">
+                  <span class="addon-name">Create Road Map</span>
+                  <span class="addon-price">+100 EUR flat</span>
+                </div>
+                <span class="addon-tick">&#10003;</span>
+              </button>
+              <button class="addon-btn" id="addon-guide" type="button">
+                <div class="addon-btn-left">
+                  <span class="addon-name">Private Guide</span>
+                  <span class="addon-price">+550 EUR flat &mdash; requires 5+ travelers</span>
+                </div>
+                <span class="addon-tick">&#10003;</span>
+              </button>
+            </div>
+            <div id="guide-alert" hidden>
+              <span>&#9650;</span>
+              At least 5 travelers required to add a Private Guide.
+            </div>
+          </div>
+
+        </div><!-- end plan-builder -->
+
+        <!-- RIGHT: Summary -->
+        <aside class="plan-summary">
+          <div class="plan-summary-title">Your Journey</div>
+          <div class="summary-rows" id="summary-rows">
+            <div class="summary-row" id="sr-tour">
+              <span class="summary-row-label">Tour</span>
+              <span class="summary-row-val" id="sv-tour">&mdash;</span>
+            </div>
+            <div class="summary-row" id="sr-travelers">
+              <span class="summary-row-label">Travelers</span>
+              <span class="summary-row-val" id="sv-travelers">2 adults</span>
+            </div>
+            <div class="summary-row" id="sr-dates">
+              <span class="summary-row-label">Dates</span>
+              <span class="summary-row-val" id="sv-dates">&mdash;</span>
+            </div>
+            <div class="summary-row" id="sr-visa" hidden>
+              <span class="summary-row-label">Visa Support</span>
+              <span class="summary-row-val" id="sv-visa"></span>
+            </div>
+            <div class="summary-row" id="sr-map" hidden>
+              <span class="summary-row-label">Road Map</span>
+              <span class="summary-row-val" id="sv-map">100 EUR</span>
+            </div>
+            <div class="summary-row" id="sr-guide" hidden>
+              <span class="summary-row-label">Private Guide</span>
+              <span class="summary-row-val" id="sv-guide">550 EUR</span>
+            </div>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-total-label">Grand Total</div>
+          <div class="summary-total-val"><span class="currency">EUR&thinsp;</span><span id="total-val">0</span></div>
+          <a class="btn-wa" id="wa-btn" href="#" target="_blank" rel="noopener">Confirm via WhatsApp</a>
+        </aside>
       </div>
     </div>
   </section>
@@ -1209,6 +1461,159 @@
         });
       });
     }
+  </script>
+
+  <!-- Booking Calculator -->
+  <script>
+    (function(){
+      var adults   = 2, children = 0;
+      var tourName = '', tourPrice = 0;
+      var visaOn = false, mapOn = false, guideOn = false;
+
+      var $ = function(id){ return document.getElementById(id); };
+
+      function updateSteppers(){
+        $('adults-val').textContent   = adults;
+        $('children-val').textContent = children;
+      }
+
+      function totalTravelers(){ return adults + children; }
+
+      function recalc(){
+        var tourSub  = tourPrice > 0 ? adults * tourPrice + children * (tourPrice * 0.5) : 0;
+        var visaSub  = visaOn  ? totalTravelers() * 150 : 0;
+        var mapSub   = mapOn   ? 100 : 0;
+        var guideSub = guideOn ? 550 : 0;
+        var total    = tourSub + visaSub + mapSub + guideSub;
+
+        $('total-val').textContent = total.toLocaleString('en');
+
+        // Tour row
+        if(tourPrice > 0){
+          $('sv-tour').textContent = tourName + ' — ' + tourSub.toLocaleString('en') + ' EUR';
+        } else {
+          $('sv-tour').innerHTML = '&mdash;';
+        }
+
+        // Travelers
+        var tStr = adults + ' adult' + (adults !== 1 ? 's' : '');
+        if(children > 0) tStr += ', ' + children + ' child' + (children !== 1 ? 'ren' : '');
+        $('sv-travelers').textContent = tStr;
+
+        // Visa
+        if(visaOn){
+          $('sr-visa').hidden = false;
+          $('sv-visa').textContent = visaSub.toLocaleString('en') + ' EUR';
+        } else {
+          $('sr-visa').hidden = true;
+        }
+
+        // Map
+        $('sr-map').hidden = !mapOn;
+
+        // Guide
+        $('sr-guide').hidden = !guideOn;
+
+        // Dates
+        var ds = $('date-start').value, de = $('date-end').value;
+        if(ds && de){
+          var fmt = function(d){ var p=d.split('-'); return p[2]+'.'+p[1]+'.'+p[0]; };
+          $('sv-dates').textContent = fmt(ds) + ' – ' + fmt(de);
+        } else if(ds){
+          var fmtd = function(d){ var p=d.split('-'); return p[2]+'.'+p[1]+'.'+p[0]; };
+          $('sv-dates').textContent = fmtd(ds) + ' – ?';
+        } else {
+          $('sv-dates').innerHTML = '&mdash;';
+        }
+
+        // WhatsApp link
+        var msg = 'Hello CEEP Tourism!\n\nI would like to book:\n';
+        msg += 'Tour: ' + (tourName || 'Not selected') + '\n';
+        msg += 'Travelers: ' + tStr + '\n';
+        var dateStr = ($('sv-dates').textContent || '—');
+        msg += 'Dates: ' + dateStr + '\n';
+        if(visaOn) msg += 'Add-on: Visa Support (' + visaSub + ' EUR)\n';
+        if(mapOn)  msg += 'Add-on: Road Map (100 EUR)\n';
+        if(guideOn) msg += 'Add-on: Private Guide (550 EUR)\n';
+        msg += 'Grand Total: ' + total.toLocaleString('en') + ' EUR\n';
+        msg += '\nPlease confirm availability. Thank you!';
+        $('wa-btn').href = 'https://wa.me/994517930903?text=' + encodeURIComponent(msg);
+      }
+
+      // Steppers
+      $('adults-plus').addEventListener('click', function(){
+        adults++; updateSteppers(); checkGuideRule(); recalc();
+      });
+      $('adults-minus').addEventListener('click', function(){
+        if(adults > 1){ adults--; updateSteppers(); checkGuideRule(); recalc(); }
+      });
+      $('children-plus').addEventListener('click', function(){
+        children++; updateSteppers(); checkGuideRule(); recalc();
+      });
+      $('children-minus').addEventListener('click', function(){
+        if(children > 0){ children--; updateSteppers(); checkGuideRule(); recalc(); }
+      });
+
+      // Guide rule
+      function checkGuideRule(){
+        if(guideOn && totalTravelers() < 5){
+          guideOn = false;
+          $('addon-guide').classList.remove('active');
+          $('guide-alert').hidden = false;
+        } else if(totalTravelers() >= 5){
+          $('guide-alert').hidden = true;
+        }
+      }
+
+      // Tour cards
+      document.querySelectorAll('input[name="tour"]').forEach(function(radio){
+        radio.addEventListener('change', function(){
+          tourName  = radio.closest('.tour-card').querySelector('.tour-card-name').textContent;
+          tourPrice = parseInt(radio.dataset.price, 10);
+          document.querySelectorAll('.tour-card').forEach(function(c){ c.classList.remove('selected'); });
+          radio.closest('.tour-card').classList.add('selected');
+          recalc();
+        });
+      });
+
+      // Add-ons
+      $('addon-visa').addEventListener('click', function(){
+        visaOn = !visaOn;
+        this.classList.toggle('active', visaOn);
+        recalc();
+      });
+      $('addon-map').addEventListener('click', function(){
+        mapOn = !mapOn;
+        this.classList.toggle('active', mapOn);
+        recalc();
+      });
+      $('addon-guide').addEventListener('click', function(){
+        if(!guideOn && totalTravelers() < 5){
+          $('guide-alert').hidden = false;
+          return;
+        }
+        guideOn = !guideOn;
+        this.classList.toggle('active', guideOn);
+        $('guide-alert').hidden = true;
+        recalc();
+      });
+
+      // Dates
+      $('date-start').addEventListener('change', recalc);
+      $('date-end').addEventListener('change', recalc);
+
+      // Also add "Plan" to nav links
+      var navLinks = document.querySelector('.nav-links');
+      if(navLinks){
+        var planLi = document.createElement('li');
+        planLi.innerHTML = '<a href="#plan">Plan</a>';
+        var serviceItem = navLinks.querySelector('a[href="#services"]');
+        if(serviceItem) serviceItem.closest('li').after(planLi);
+        else navLinks.appendChild(planLi);
+      }
+
+      recalc();
+    })();
   </script>
 </body>
 </html>
