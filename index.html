@@ -605,14 +605,15 @@
     .btn-wa { display: block; width: 100%; margin-top: 1.4rem; padding: 1rem; background: var(--terracotta-d); color: white; text-align: center; font-family: var(--font-body); font-size: .88rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border: none; border-radius: 6px; cursor: pointer; text-decoration: none; transition: background .2s, transform .15s; }
     .btn-wa:hover { background: #235469; transform: translateY(-1px); }
 
-    /* Mobile summary bar */
+    /* Mobile summary — flows inline below builder steps, never fixed/sticky */
     @media(max-width:1024px){
-      .plan-summary { position: fixed; bottom: 0; left: 0; right: 0; border-radius: 16px 16px 0 0; z-index: 200; padding: 1rem 1.4rem; border-bottom: none; box-shadow: 0 -4px 30px rgba(14,42,58,.12); display: flex; flex-direction: column; gap: .5rem; }
-      .plan-summary-title { font-size: 1.3rem; margin-bottom: .3rem; }
-      .summary-rows { flex-direction: row; flex-wrap: wrap; gap: .4rem; margin-bottom: 0; }
-      .summary-row { flex-direction: column; align-items: flex-start; gap: 0; min-width: 90px; }
-      .summary-total-val { font-size: 2rem; }
-      .summary-divider { display: none; }
+      .plan-grid { gap: 2rem; }
+      .plan-summary { position: static !important; top: auto !important; bottom: auto !important; left: auto !important; right: auto !important; width: 100% !important; max-height: none !important; box-shadow: 0 4px 24px rgba(46,106,130,0.08); margin-top: 2rem; border-radius: 12px; padding: 1.5rem 1.4rem; }
+      .plan-summary-title { font-size: 1.4rem; margin-bottom: .8rem; }
+      .summary-rows { flex-direction: column; gap: .55rem; margin-bottom: 1rem; }
+      .summary-row { flex-direction: row; align-items: baseline; }
+      .summary-total-val { font-size: 2.2rem; }
+      .summary-divider { display: block; }
     }
   </style>
 </head>
@@ -1028,17 +1029,9 @@
               <span class="summary-row-label">Dates</span>
               <span class="summary-row-val" id="sv-dates">&mdash;</span>
             </div>
-            <div class="summary-row" id="sr-visa" hidden>
-              <span class="summary-row-label">Visa Support</span>
-              <span class="summary-row-val" id="sv-visa"></span>
-            </div>
-            <div class="summary-row" id="sr-map" hidden>
-              <span class="summary-row-label">Road Map</span>
-              <span class="summary-row-val" id="sv-map">100 EUR</span>
-            </div>
-            <div class="summary-row" id="sr-guide" hidden>
-              <span class="summary-row-label">Private Guide</span>
-              <span class="summary-row-val" id="sv-guide">550 EUR</span>
+            <div class="summary-row" id="sr-addons" hidden>
+              <span class="summary-row-label">Add-Ons</span>
+              <span class="summary-row-val" id="sv-addons" style="line-height:1.6"></span>
             </div>
           </div>
           <div class="summary-divider"></div>
@@ -1488,31 +1481,29 @@
 
         $('total-val').textContent = total.toLocaleString('en');
 
-        // Tour row
+        // Tour row — name only, no price
         if(tourPrice > 0){
-          $('sv-tour').textContent = tourName + ' — ' + tourSub.toLocaleString('en') + ' EUR';
+          $('sv-tour').textContent = tourName;
         } else {
           $('sv-tour').innerHTML = '&mdash;';
         }
 
         // Travelers
         var tStr = adults + ' adult' + (adults !== 1 ? 's' : '');
-        if(children > 0) tStr += ', ' + children + ' child' + (children !== 1 ? 'ren' : '');
+        tStr += ', ' + children + ' child' + (children !== 1 ? 'ren' : '');
         $('sv-travelers').textContent = tStr;
 
-        // Visa
-        if(visaOn){
-          $('sr-visa').hidden = false;
-          $('sv-visa').textContent = visaSub.toLocaleString('en') + ' EUR';
+        // Add-Ons — grouped bullet list, no EUR amounts
+        var addons = [];
+        if(visaOn)  addons.push('\u00b7 Visa Support');
+        if(mapOn)   addons.push('\u00b7 Road Map');
+        if(guideOn) addons.push('\u00b7 Private Guide');
+        if(addons.length > 0){
+          $('sr-addons').hidden = false;
+          $('sv-addons').innerHTML = addons.join('<br>');
         } else {
-          $('sr-visa').hidden = true;
+          $('sr-addons').hidden = true;
         }
-
-        // Map
-        $('sr-map').hidden = !mapOn;
-
-        // Guide
-        $('sr-guide').hidden = !guideOn;
 
         // Dates
         var ds = $('date-start').value, de = $('date-end').value;
